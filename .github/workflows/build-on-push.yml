@@ -1,10 +1,12 @@
 name: build-on-push
 on: push
 jobs:
-  my-job:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: build
-        run: make install
+        run:
+          pip install poetry
+          make install
       - name: lint-step
         run: make lint
