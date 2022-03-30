@@ -1,14 +1,19 @@
 name: build-on-push
-on: push
+on:
+  - push
+
 jobs:
   build:
+
     runs-on: ubuntu-latest
+
     steps:
-      - name: build
-        run:
-          pip install poetry
-          make install
-          make build
-          make publish
-      - name: lint-step
-        run: make lint
+      - uses: actions/checkout@v2
+      - name: setup-python
+        uses: actions/setup-python@v2
+      - name: install1
+        run:  pip install poetry
+      - name: install2
+        run: make install
+      - name: run-linter
+        run:  make lint
