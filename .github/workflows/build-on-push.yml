@@ -5,6 +5,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: build
-        run: make install & make build & make publish & make package-install
+        run: make install
       - name: lint-step
         run: make lint
