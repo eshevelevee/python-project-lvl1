@@ -1,5 +1,6 @@
-import prompt
 """Запрашивает имя игрока."""
+
+import prompt
 
 
 def welcome_user():
