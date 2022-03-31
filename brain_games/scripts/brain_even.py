@@ -2,13 +2,13 @@
 """Игра в определение четности числа."""
 
 from random import randint
-from brain_games.cli import welcome_user
-
 import prompt
+from brain_games.cli import welcome_user
 
 
 def even_question(number_of_tries):
     """Игра на определение четности числа.
+
     :param number_of_tries: количество успешных попыток подряд для выигрыша
     :type number_of_tries: int
     :return: 0 если игрок ошибся
