@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 """Игра в определение четности числа."""
+
 from random import randint
 from brain_games.cli import welcome_user
 
@@ -7,10 +8,8 @@ import prompt
 
 
 def even_question(number_of_tries):
-    """Игра на определение четности числа
-
-    Аргументы:
-    :param number_of_tries: количество успешных попыток подряд для выигрыша в игре
+    """Игра на определение четности числа.
+    :param number_of_tries: количество успешных попыток подряд для выигрыша
     :type number_of_tries: int
     :return: 0 если игрок ошибся
     """
@@ -29,16 +28,17 @@ def even_question(number_of_tries):
             print('Correct!')
             total_correct += 1
         else:
-            message = '''
+            message = """
 'yes' is wrong answer ;(. Correct answer was 'no'. \n
 Let's try again, {0}!
-'''.format(name)
+""".format(name)
             print(message)
             return 0
     print('Congratulations, {0}!'.format(name))
 
 
 def main():
+    """Запуск игры"""
     even_question(3)
 
 
